@@ -5,7 +5,10 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page', style: Theme.of(context).textTheme.headline6),
+        title: Text(
+          'Third Page',
+          style: Theme.of(context).textTheme.titleLarge, // ganti headline6
+        ),
       ),
       body: Center(
         child: ElevatedButton(
@@ -13,13 +16,13 @@ class ThirdPage extends StatelessWidget {
             Navigator.pop(context);
           },
           style: ElevatedButton.styleFrom(
-            primary: Theme.of(context).buttonColor,
+            backgroundColor: Theme.of(context).colorScheme.primary, // ganti buttonColor
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
             textStyle: TextStyle(fontSize: 18),
           ),
           child: Text(
             'Kembali ke Halaman Utama',
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium, // ganti bodyText2
           ),
         ),
       ),
