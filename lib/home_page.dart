@@ -24,12 +24,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page', style: Theme.of(context).textTheme.headline6),
+        title: Text(
+          'Home Page',
+          style: Theme.of(context).textTheme.titleLarge, // pengganti headline6
+        ),
       ),
       body: Center(
         child: Text(
           'Halaman Utama',
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge, // pengganti bodyText1
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -46,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.pageview),
-            label: 'Third Page', // Menambahkan item untuk halaman ketiga
+            label: 'Third Page',
           ),
         ],
       ),
